@@ -37,7 +37,7 @@ Public Class PagosAD
     Public Sub ModificarPagos(ByVal pPagos As PagosEN)
         Try
             Dim strUpdate As String
-            strUpdate = "UPDATE Pagos SET (Num_Pago=@Num_Pago, Fecha_Pago=@Fecha_Pago, Monto_Pago=@Monto_Pago, Observaciones=@Observaciones, Banco_Del_Pago=@Banco_Del_Pago, Cod_Proyecto= @Cod_Proyecto)"
+            strUpdate = "UPDATE Pagos SET Num_Pago=@Num_Pago, Fecha_Pago=@Fecha_Pago, Monto_Pago=@Monto_Pago, Observaciones=@Observaciones, Banco_Del_Pago=@Banco_Del_Pago, Cod_Proyecto= @Cod_Proyecto WHERE Num_Pago=@Num_Pago"
             miConexion.Open()
             Dim cmdPagos As New OleDbCommand(strUpdate, miConexion)
             cmdPagos.Parameters.Add("@Num_Pago", OleDbType.VarChar).Value = pPagos.Num_Pago
@@ -62,7 +62,7 @@ Public Class PagosAD
     Public Sub EliminarPagos(ByVal pPagos As PagosEN)
         Try
             Dim strDelete As String
-            strDelete = "DELETE FROM Pagos WHERE Num_Pagos=@Num_Pago"
+            strDelete = "DELETE FROM Pagos WHERE Num_Pago=@Num_Pago"
             miConexion.Open()
             Dim cmdPagos As New OleDbCommand(strDelete, miConexion)
             cmdPagos.Parameters.Add("@Num_Pago", OleDbType.VarChar).Value = pPagos.Num_Pago

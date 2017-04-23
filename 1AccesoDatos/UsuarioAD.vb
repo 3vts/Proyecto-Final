@@ -36,7 +36,7 @@ Public Class UsuarioAD
     Public Sub ModificarUsuario(ByVal pUsuario As UsuarioEN)
         Try
             Dim strUpdate As String
-            strUpdate = "UPDATE Usuario SET Login=@Login, Nom_Completo=@Nom_Completo, Clave=@Clave, Administrador=@Administrador, Digitador=@Digitador"
+            strUpdate = "UPDATE Usuario SET Login=@Login, Nom_Completo=@Nom_Completo, Clave=@Clave, Administrador=@Administrador, Digitador=@Digitador WHERE Login=@Login"
             miConexion.Open()
             Dim cmdUsuario As New OleDbCommand(strUpdate, miConexion)
             cmdUsuario.Parameters.Add("@Login", OleDbType.VarChar).Value = pUsuario.Login

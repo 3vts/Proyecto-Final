@@ -6,8 +6,16 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:_4WPF"
         mc:Ignorable="d"
-        Title="Acerca de" Height="300" Width="300">
+        BorderThickness="0"
+        GlowBrush="Gray"
+        Title="Acerca de" Height="320" MaxHeight="320" MinHeight="320" Width="450" MaxWidth="450" MinWidth="450" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Image x:Name="image" HorizontalAlignment="Left" Height="290" Margin="0,0,0,0" VerticalAlignment="Top" Width="130" Source="right-pic.jpg"/>
+        <Label x:Name="lblProductName" Content="Product Name" HorizontalAlignment="Left" Margin="135,10,0,0" VerticalAlignment="Top" Width="297"/>
+        <Label x:Name="lblVersion" Content="Version" HorizontalAlignment="Left" Margin="135,41,0,0" VerticalAlignment="Top" Width="297"/>
+        <Label x:Name="lblCopyright" Content="Copyright" HorizontalAlignment="Left" Margin="135,72,0,0" VerticalAlignment="Top" Width="297"/>
+        <Label x:Name="lblCompanyName" Content="Company Name" HorizontalAlignment="Left" Margin="135,103,0,0" VerticalAlignment="Top" Width="297"/>
+        <TextBox x:Name="txtLicense" HorizontalAlignment="Left" Height="110" Margin="135,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" VerticalScrollBarVisibility="Visible" IsReadOnly="True"/>
+        <Button x:Name="cmdOK" Content="_OK" HorizontalAlignment="Left" Margin="357,252,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
     </Grid>
 </Controls:MetroWindow>

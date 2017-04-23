@@ -39,7 +39,7 @@ Public Class ProyectosAD
     Public Sub ModificarProyectos(ByVal pProyectos As ProyectosEN)
         Try
             Dim strUpdate As String
-            strUpdate = "UPDATE Proyectos SET Cod_Proyecto=@Cod_Proyecto, Nombre_Proyecto=@Nombre_Proyecto, Fec_Creacion=@Fec_Creacion, Fec_Finalizacion=@Fec_Finalizacion, Costo_Total=@Costo_Total, Observaciones=@Observaciones, Num_Cliente=@Num_Cliente"
+            strUpdate = "UPDATE Proyectos SET Cod_Proyecto=@Cod_Proyecto, Nombre_Proyecto=@Nombre_Proyecto, Fec_Creacion=@Fec_Creacion, Fec_Finalizacion=@Fec_Finalizacion, Costo_Total=@Costo_Total, Observaciones=@Observaciones, Num_Cliente=@Num_Cliente WHERE Cod_Proyecto=@Cod_Proyecto"
             miConexion.Open()
             Dim cmdProyectos As New OleDbCommand(strUpdate, miConexion)
             cmdProyectos.Parameters.Add("@Cod_Proyecto", OleDbType.VarChar).Value = pProyectos.Cod_Proyecto

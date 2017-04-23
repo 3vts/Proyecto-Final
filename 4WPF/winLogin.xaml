@@ -6,16 +6,14 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:_4WPF"
         mc:Ignorable="d"
-        Title="Ingreso al sistema" Height="300" Width="300" MinHeight="300" MaxHeight="300" MinWidth="300" MaxWidth="300" WindowStartupLocation="CenterScreen">
+        Title="Ingreso al sistema" Height="231" Width="417" MinHeight="231" MaxHeight="231" MinWidth="417" MaxWidth="417" WindowStartupLocation="CenterScreen">
     <Grid Background="#FF4893B4">
-        <Label x:Name="lblWelcome" Content="Ingrese sus credenciales" Margin="56,16,56,0" VerticalAlignment="Top" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" FontSize="16"/>
-        <Grid Margin="47,97,48,98">
-            <Label x:Name="lblUsuario" Content="Usuario" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
-            <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="77,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            <Label x:Name="lblPass" Content="Contraseña" HorizontalAlignment="Left" Margin="0,48,0,0" VerticalAlignment="Top" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
-            <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="77,48,0,0" VerticalAlignment="Top" Width="120"/>
-        </Grid>
-        <Button x:Name="cmdIngresar" Content="_Ingresar" HorizontalAlignment="Left" Margin="30,0,0,25" Width="75" Height="27" VerticalAlignment="Bottom" Click="cmdIngresar_Click" ToolTip="Ingresar al sistema"/>
-        <Button x:Name="cmdCancelar" Content="_Cancelar" Margin="0,0,30,25" HorizontalAlignment="Right" Width="75" Height="27" VerticalAlignment="Bottom" Click="cmdCancelar_Click" ToolTip="Cancelar y salir"/>
+        <Label x:Name="lblUsuario" Content="Usuario" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Margin="172,18,0,0" Width="222"/>
+        <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="174,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <Label x:Name="lblPass" Content="Contraseña" HorizontalAlignment="Left" Margin="172,81,0,0" VerticalAlignment="Top" Foreground="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}" Width="222"/>
+        <PasswordBox x:Name="txtPass" HorizontalAlignment="Left" Margin="174,107,0,0" VerticalAlignment="Top" Width="220"/>
+        <Button x:Name="cmdIngresar" Content="_Ingresar" HorizontalAlignment="Left" Margin="197,161,0,0" Width="75" Click="cmdIngresar_Click" ToolTip="Ingresar al sistema" Height="27" VerticalAlignment="Top"/>
+        <Button x:Name="cmdCancelar" Content="_Cancelar" Margin="300,161,0,0" HorizontalAlignment="Left" Width="75" Height="27" VerticalAlignment="Top" Click="cmdCancelar_Click" ToolTip="Cancelar y salir"/>
+        <Image x:Name="imgLogin" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="165" Source="login.jpg"/>
     </Grid>
 </Controls:MetroWindow>

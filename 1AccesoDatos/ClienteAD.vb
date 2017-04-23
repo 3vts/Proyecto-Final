@@ -38,7 +38,7 @@ Public Class ClienteAD
     Public Sub ModificarCliente(ByVal pCliente As ClienteEN)
         Try
             Dim strUpdate As String
-            strUpdate = "UPDATE Cliente SET Num_Cliente=@Num_Cliente, Nombre=@Nombre, Telefono=@Telefono, Direccion=@Direccion, Indicador_Empresa=@Indicador_Empresa, Indicador_Persona=@Indicador_Persona, Cedula_Juridica=@Cedula_Juridica"
+            strUpdate = "UPDATE Cliente SET Num_Cliente=@Num_Cliente, Nombre=@Nombre, Telefono=@Telefono, Direccion=@Direccion, Indicador_Empresa=@Indicador_Empresa, Indicador_Persona=@Indicador_Persona, Cedula_Juridica=@Cedula_Juridica WHERE Num_Cliente=@Num_Cliente"
             miConexion.Open()
             Dim cmdCliente As New OleDbCommand(strUpdate, miConexion)
             cmdCliente.Parameters.Add("@Num_Cliente", OleDbType.VarChar).Value = pCliente.Num_Cliente

@@ -15,9 +15,9 @@
                 <Label x:Name="lblLogin" Content="Login" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.045,-1.316"/>
                 <Label x:Name="lblNombre" Content="Nombre Completo" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.045,-1.316"/>
                 <Label x:Name="lblClave" Content="Clave" HorizontalAlignment="Left" Margin="10,100,0,0" RenderTransformOrigin="-0.045,-1.316" Height="26" VerticalAlignment="Top"/>
-                <TextBox x:Name="txtNumUsuario" HorizontalAlignment="Left" Height="23" Margin="119,20,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="144" MaxLength="15"/>
-                <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="119,60,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="144" MaxLength="6"/>
-                <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="23" Margin="119,100,0,0" TextWrapping="Wrap" Width="144" MaxLength="9" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Height="23" Margin="119,20,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="144" MaxLength="10"/>
+                <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="119,60,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="144" MaxLength="60"/>
+                <TextBox x:Name="txtClave" HorizontalAlignment="Left" Height="23" Margin="119,100,0,0" TextWrapping="Wrap" Width="144" MaxLength="10" VerticalAlignment="Top"/>
                 <GroupBox x:Name="grpTipoUsuario" Style="{x:Null}" Header="Tipo de Usuario" HorizontalAlignment="Left" Margin="298,41,0,0" VerticalAlignment="Top" Width="202" Height="66">
                     <Grid>
                         <RadioButton x:Name="radAdministrador" Content="Administrador" HorizontalAlignment="Left" Margin="4,15,0,0" VerticalAlignment="Top" IsChecked="True"/>
