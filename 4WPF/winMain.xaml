@@ -1,0 +1,45 @@
+﻿<Controls:MetroWindow x:Class="_4WPF.winMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_4WPF"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="Proyecto Final" Height="350" Width="525" WindowState="Maximized" Loaded="MetroWindow_Loaded">
+    <Grid>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="517">
+            <MenuItem x:Name="mnuCatalogos" Header="_Catálogos Datos">
+                <MenuItem x:Name="mnuitClientes" Header="Clientes" Click="mnuitClientes_Click"/>
+                <MenuItem x:Name="mnuitProyectos" Header="Proyectos" Click="mnuitProyectos_Click"/>
+                <MenuItem x:Name="mnuitUsuarios" Header="Usuarios" Click="mnuitUsuarios_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="mnuProcesos" Header="_Procesos">
+                <MenuItem x:Name="mnuitRegistroPagos" Header="Registro Pagos" Click="mnuitRegistroPagos_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="mnuReportes" Header="_Reportes">
+                <MenuItem x:Name="mnuitPagoFechas" Header="Pagos Entre Fechas" Click="mnuitPagoFechas_Click"/>
+                <MenuItem x:Name="mnuitPagoProyecto" Header="Pagos de un Proyecto" Click="mnuitPagoProyecto_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="mnuAyuda" Header="_Ayuda">
+                <MenuItem x:Name="mnuitAcercaDe" Header="Acerca de" Click="mnuitAcercaDe_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="mnuSalir" Header="_Salir" Click="mnuSalir_Click"/>
+        </Menu>
+        <StatusBar x:Name="ssBar" Height="30" VerticalAlignment="Bottom">
+            <StatusBarItem Grid.Column="0" ClipToBounds="True">
+                <TextBlock x:Name="sslbCopyright" HorizontalAlignment="Left" ClipToBounds="True" Text="Ready"/>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="1" ClipToBounds="True" HorizontalContentAlignment="Center">
+                <TextBlock x:Name="sslbUser" HorizontalAlignment="Center" ClipToBounds="True" Text="Set"/>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="2" HorizontalAlignment="Right" ClipToBounds="True">
+                <TextBlock x:Name="sslbUserType" HorizontalAlignment="Right" ClipToBounds="True" Text="Go!"/>
+            </StatusBarItem>
+        </StatusBar>
+        <ToolBar x:Name="toolBar" Margin="0,24,0,0" MinHeight="30" MaxHeight="30" Height="30" VerticalAlignment="Top">
+            <Button Content="Registro Pago" ClipToBounds="True" Click="mnuitRegistroPagos_Click"/>
+            <Button Content="_Salir" ClipToBounds="True" Click="mnuSalir_Click"/>
+        </ToolBar>
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,39 @@
+﻿<Controls:MetroWindow x:Class="_4WPF.winProyectos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:_4WPF"
+        mc:Ignorable="d"
+        BorderThickness="0"
+        GlowBrush="Gray"
+        Title="Proyectos" Height="355" Width="550" MinHeight="355" MaxHeight="355" MinWidth="550" MaxWidth="550" WindowStartupLocation="CenterScreen" Loaded="MetroWindow_Loaded">
+    <Grid>
+        <GroupBox x:Name="grpProyecto" Header="Proyecto" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="270" Width="522">
+            <Grid>
+
+                <Label x:Name="lblNomCliente" Content="Nombre Cliente" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.045,-1.316" Margin="10,19,0,0"/>
+                <Label x:Name="lblCodProyecto" Content="Código Proyecto" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.045,-1.316" Margin="10,59,0,0"/>
+                <Label x:Name="lblNombre" Content="Nombre Proyecto" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.045,-1.316"/>
+                <Label x:Name="lblFechaCreacion" Content="Fecha Creación" HorizontalAlignment="Left" Margin="10,139,0,0" RenderTransformOrigin="-0.045,-1.316" Height="26" VerticalAlignment="Top"/>
+                <Label x:Name="lblFechaFinalizacion" Content="Fecha Finalización" HorizontalAlignment="Left" Margin="10,185,0,0" RenderTransformOrigin="-0.045,-1.316" Height="26" VerticalAlignment="Top"/>
+                <ComboBox x:Name="cboNombreCliente" Grid.Row="0" Margin="119,0,0,186" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="149" ItemsSource="{Binding}" DisplayMemberPath="Nombre" SelectedValuePath="Num_Cliente"/>
+                <TextBox x:Name="txtCodProyecto" HorizontalAlignment="Left" Height="23" Margin="118,59,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" MaxLength="15"/>
+                <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="23" Margin="118,99,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" MaxLength="60"/>
+                <DatePicker x:Name="dtpFechaCreacion" HorizontalAlignment="Left" Margin="118,139,0,0" VerticalAlignment="Top" Width="150"/>
+                <DatePicker x:Name="dtpFechaFinalizacion" HorizontalAlignment="Left" Margin="118,185,0,0" VerticalAlignment="Top" Width="150"/>
+                <Label x:Name="lblCostoTotal" Content="Costo Total" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.045,-1.316" Margin="298,19,0,0"/>
+                <TextBox x:Name="txtCostoTotal" HorizontalAlignment="Left" Height="23" Margin="372,19,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="128" MaxLength="15"/>
+                <Label x:Name="lblObservaciones" Content="Observaciones" HorizontalAlignment="Left" Margin="298,56,0,0" RenderTransformOrigin="-0.045,-1.316" Height="26" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Margin="298,83,0,20" TextWrapping="Wrap" Width="202" MaxLength="255" VerticalScrollBarVisibility="Auto"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="cmdBuscar" Content="_Buscar" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" Width="75" Click="cmdBuscar_Click" ToolTip="Buscar Registro"/>
+        <Button x:Name="cmdInsertar" Content="_Insertar" HorizontalAlignment="Left" Margin="98,290,0,0" VerticalAlignment="Top" Width="75" Click="cmdInsertar_Click" ToolTip="Insertar Registro"/>
+        <Button x:Name="cmdModificar" Content="_Modificar" HorizontalAlignment="Left" Margin="193,290,0,0" VerticalAlignment="Top" Width="75" Click="cmdModificar_Click" ToolTip="Modificar Registro"/>
+        <Button x:Name="cmdBorrar" Content="_Borrar" HorizontalAlignment="Left" Margin="285,290,0,0" VerticalAlignment="Top" Width="75" Click="cmdBorrar_Click" ToolTip="Borrar registro"/>
+        <Button x:Name="cmdImprimir" Content="Im_primir" HorizontalAlignment="Left" Margin="373,290,0,0" VerticalAlignment="Top" Width="75" ToolTip="Imprimir los datos en pantalla"/>
+        <Button x:Name="cmdSalir" Content="_Salir" HorizontalAlignment="Left" Margin="457,290,0,0" VerticalAlignment="Top" Width="75" Click="cmdSalir_Click" ToolTip="Salir de la ventana"/>
+    </Grid>
+</Controls:MetroWindow>

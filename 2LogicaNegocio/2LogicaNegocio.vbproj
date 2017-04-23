@@ -63,7 +63,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.vb" />
+    <Compile Include="ClienteLN.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -79,6 +79,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="PagosLN.vb" />
+    <Compile Include="ProyectosLN.vb" />
+    <Compile Include="UsuarioLN.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -98,6 +101,16 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\1AccesoDatos\1AccesoDatos.vbproj">
+      <Project>{c4cb44e1-2f38-4505-8d21-4f7316eee806}</Project>
+      <Name>1AccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\3Entidades\3Entidades.vbproj">
+      <Project>{825e4ba8-b2c9-4abc-8eaa-06430436030d}</Project>
+      <Name>3Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
