@@ -113,5 +113,11 @@ namespace _4WPF
         {
             Close();
         }
+
+        private void cmdImprimir_Click(object sender, RoutedEventArgs e)
+        {
+            var imprimir = new winImprimirUsuarios();
+            imprimir.ShowDialog();
+        }
     }
 }

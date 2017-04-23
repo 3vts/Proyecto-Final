@@ -16,7 +16,7 @@
         <GroupBox x:Name="grpFechas" Header="Seleccione el proyecto a desplegar" Margin="70,10,70,0" VerticalAlignment="Top" Height="115">
             <Grid>
                 <Label x:Name="lblNombreProyecto" Content="Nombre del Proyecto:" HorizontalAlignment="Left" Margin="45,20,0,0" VerticalAlignment="Top"/>
-                <Button x:Name="cmdCargarReporte" Content="_Cargar Reporte" HorizontalAlignment="Left" Margin="484,19,0,0" VerticalAlignment="Top" Width="104" Click="cmdCargarReporte_Click" Loaded="cmdCargarReporte_Loaded"/>
+                <Button x:Name="cmdCargarReporte" Content="_Cargar Reporte" HorizontalAlignment="Left" Margin="484,19,0,0" VerticalAlignment="Top" Width="104" Click="cmdCargarReporte_Click" ToolTip="Cargar Reporte" Loaded="cmdCargarReporte_Loaded"/>
                 <ComboBox x:Name="cboNombreProyecto" Grid.Row="0" HorizontalAlignment="Left" Margin="190,21,0,0" VerticalAlignment="Top" Width="149" ItemsSource="{Binding}" DisplayMemberPath="Nombre_Proyecto" SelectedValuePath="Cod_Proyecto"/>
             </Grid>
         </GroupBox>

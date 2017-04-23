@@ -129,5 +129,11 @@ namespace _4WPF
             lstClientes = new ClienteLN().ObtenerTodosLosClientes();
             cboNombreCliente.ItemsSource = lstClientes;
         }
+
+        private void cmdImprimir_Click(object sender, RoutedEventArgs e)
+        {
+            var imprimir = new winImprimirProyectos();
+            imprimir.ShowDialog();
+        }
     }
 }

@@ -13,13 +13,13 @@
     <Grid>
 
         <Viewer:CrystalReportsViewer x:Name="crvPagoFechas" ToggleSidePanel="None" Margin="0,148,0,0" />
-        <GroupBox x:Name="grpFechas" Header="Seleccione las fechas a desplegar" Margin="70,10,70,0" VerticalAlignment="Top" Height="115">
+        <GroupBox x:Name="grpFechas" Header="Seleccione un rango de fechas" Margin="70,10,70,0" VerticalAlignment="Top" Height="115">
             <Grid>
                 <Label x:Name="lblFechaInicio" Content="Fecha Inicio" HorizontalAlignment="Left" Margin="43,22,0,0" VerticalAlignment="Top"/>
                 <DatePicker x:Name="dtpFechaInicio" HorizontalAlignment="Left" Margin="129,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.3,0"/>
                 <Label x:Name="lblFechaFinal" Content="Fecha Final" HorizontalAlignment="Left" Margin="263,22,0,0" VerticalAlignment="Top"/>
                 <DatePicker x:Name="dtpFechaFinal" HorizontalAlignment="Left" Margin="349,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.3,0"/>
-                <Button x:Name="cmdCargarReporte" Content="_Cargar Reporte" HorizontalAlignment="Left" Margin="482,21,0,0" VerticalAlignment="Top" Width="104" Click="cmdCargarReporte_Click"/>
+                <Button x:Name="cmdCargarReporte" Content="_Cargar Reporte" HorizontalAlignment="Left" Margin="482,21,0,0" VerticalAlignment="Top" Width="104" Click="cmdCargarReporte_Click" ToolTip="Cargar Reporte"/>
             </Grid>
         </GroupBox>
     </Grid>

@@ -84,11 +84,47 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsReportes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="rptClientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptClientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptPagos.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptPagos.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptPagosFicha.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPagosFicha.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptProyectos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProyectos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptUsuarios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptUsuarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="winImprimirPagos.xaml.cs">
+      <DependentUpon>winImprimirPagos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winImprimirUsuarios.xaml.cs">
+      <DependentUpon>winImprimirUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winImprimirProyectos.xaml.cs">
+      <DependentUpon>winImprimirProyectos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winImprimirCliente.xaml.cs">
+      <DependentUpon>winImprimirCliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="winPagoProyecto.xaml.cs">
       <DependentUpon>winPagoProyecto.xaml</DependentUpon>
@@ -102,6 +138,22 @@
     <Compile Include="winUsuario.xaml.cs">
       <DependentUpon>winUsuario.xaml</DependentUpon>
     </Compile>
+    <Page Include="winImprimirPagos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="winImprimirUsuarios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="winImprimirProyectos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="winImprimirCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="winPagoEntreFechas.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -177,9 +229,25 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptClientes.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptPagos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptPagos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPagosFicha.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPagosFicha.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptProyectos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProyectos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptUsuarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUsuarios.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="dsReportes.xsc">
       <DependentUpon>dsReportes.xsd</DependentUpon>

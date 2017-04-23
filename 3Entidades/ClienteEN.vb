@@ -48,6 +48,10 @@
 
 #End Region
 #Region "Propiedades"
+    ''' <summary>
+    ''' Numero de cliente
+    ''' </summary>
+    ''' <returns>Numero de cliente</returns>
     Public Property Num_Cliente As String
         Get
             Return _Num_Cliente
@@ -56,7 +60,10 @@
             _Num_Cliente = value
         End Set
     End Property
-
+    ''' <summary>
+    ''' Nombre de cliente
+    ''' </summary>
+    ''' <returns>Nombre de cliente</returns>
     Public Property Nombre As String
         Get
             Return _Nombre
@@ -65,7 +72,10 @@
             _Nombre = value
         End Set
     End Property
-
+    ''' <summary>
+    ''' Telefono de cliente
+    ''' </summary>
+    ''' <returns>Telefono de cliente</returns>
     Public Property Telefono As String
         Get
             Return _Telefono
@@ -74,7 +84,10 @@
             _Telefono = value
         End Set
     End Property
-
+    ''' <summary>
+    ''' Direccion de cliente
+    ''' </summary>
+    ''' <returns>Direccion de cliente</returns>
     Public Property Direccion As String
         Get
             Return _Direccion
@@ -83,7 +96,10 @@
             _Direccion = value
         End Set
     End Property
-
+    ''' <summary>
+    ''' Indicador si cliente es empresa
+    ''' </summary>
+    ''' <returns>Indicador si cliente es empresa</returns>
     Public Property Indicador_Empresa As Boolean
         Get
             Return _Indicador_Empresa
@@ -92,7 +108,10 @@
             _Indicador_Empresa = value
         End Set
     End Property
-
+    ''' <summary>
+    ''' Indicador si cliente es persona
+    ''' </summary>
+    ''' <returns>Indicador si cliente es persona</returns>
     Public Property Indicador_Persona As Boolean
         Get
             Return _Indicador_Persona
@@ -101,7 +120,10 @@
             _Indicador_Persona = value
         End Set
     End Property
-
+    ''' <summary>
+    ''' Cedula judidica de cliente
+    ''' </summary>
+    ''' <returns>Cedula Juridica de cliente</returns>
     Public Property Cedula_Juridica As String
         Get
             Return _Cedula_Juridica

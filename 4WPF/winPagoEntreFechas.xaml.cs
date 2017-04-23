@@ -15,13 +15,24 @@ namespace _4WPF
 
         private void cmdCargarReporte_Click(object sender, RoutedEventArgs e)
         {
-            var reporte = new rptPagos();
-            var dsReporte = new dsReportes();
-            using (var adapter = new dsReportesTableAdapters.PagosTableAdapter())
+            if (dtpFechaInicio.SelectedDate > dtpFechaFinal.SelectedDate)
             {
-                adapter.qryFechas(dsReporte.Pagos, dtpFechaInicio.SelectedDate, dtpFechaFinal.SelectedDate);
-                reporte.SetDataSource(dsReporte);
-                crvPagoFechas.ViewerCore.ReportSource = reporte;
+                MessageBox.Show("La fecha inicial no puede ser mayor que la fecha final");
+            }
+            else if (dtpFechaFinal.SelectedDate != null & dtpFechaInicio.SelectedDate != null)
+            {
+                var reporte = new rptPagos();
+                var dsReporte = new dsReportes();
+                using (var adapter = new dsReportesTableAdapters.PagosTableAdapter())
+                {
+                    adapter.qryFechas(dsReporte.Pagos, dtpFechaInicio.SelectedDate, dtpFechaFinal.SelectedDate);
+                    reporte.SetDataSource(dsReporte);
+                    crvPagoFechas.ViewerCore.ReportSource = reporte;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ambas fechas son requeridas");
             }
         }
     }

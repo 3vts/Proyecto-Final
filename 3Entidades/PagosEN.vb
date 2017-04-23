@@ -8,6 +8,9 @@
     Dim _Cod_Proyecto As String
 #End Region
 #Region "Constructores"
+    ''' <summary>
+    ''' Constructor vacio de la clase
+    ''' </summary>
     Public Sub New()
         _Num_Pago = String.Empty
         _Fecha_Pago = CType("01/01/1900", Date)
@@ -16,7 +19,15 @@
         _Banco_Del_Pago = String.Empty
         _Cod_Proyecto = String.Empty
     End Sub
-
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="pNum_Pago">Numero de pago</param>
+    ''' <param name="pFecha_Pago">Fecha de pago</param>
+    ''' <param name="pMonto_Pago">Monto del pago</param>
+    ''' <param name="pObservaciones">Observaciones del pago</param>
+    ''' <param name="pBanco_Del_Pago">Banco del pago</param>
+    ''' <param name="pCod_Proyecto">Codigo de proyecto</param>
     Public Sub New(ByVal pNum_Pago As String,
                    ByVal pFecha_Pago As Date,
                    ByVal pMonto_Pago As Double,

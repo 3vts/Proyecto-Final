@@ -124,5 +124,22 @@ namespace _4WPF
             lstProyectos = new ProyectosLN().ObtenerTodosLosProyectos();
             cboCodProyecto.ItemsSource = lstProyectos;
         }
+
+        private void cmdImprimir_Click(object sender, RoutedEventArgs e)
+        {
+            if (cboCodProyecto.SelectedIndex != -1)
+            {
+                var imprimir = new winImprimirPagos
+                {
+                    cod_Proyecto = cboCodProyecto.SelectedValue.ToString()
+                };
+                imprimir.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un proyecto");
+            }
+
+        }
     }
 }

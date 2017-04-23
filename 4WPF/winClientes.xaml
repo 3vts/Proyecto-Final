@@ -34,7 +34,7 @@
         <Button x:Name="cmdInsertar" Content="_Insertar" HorizontalAlignment="Left" Margin="98,246,0,0" VerticalAlignment="Top" Width="75" Click="cmdInsertar_Click" ToolTip="Insertar Registro"/>
         <Button x:Name="cmdModificar" Content="_Modificar" HorizontalAlignment="Left" Margin="193,246,0,0" VerticalAlignment="Top" Width="75" Click="cmdModificar_Click" ToolTip="Modificar Registro"/>
         <Button x:Name="cmdBorrar" Content="_Borrar" HorizontalAlignment="Left" Margin="285,246,0,0" VerticalAlignment="Top" Width="75" Click="cmdBorrar_Click" ToolTip="Borrar registro"/>
-        <Button x:Name="cmdImprimir" Content="Im_primir" HorizontalAlignment="Left" Margin="373,246,0,0" VerticalAlignment="Top" Width="75" ToolTip="Imprimir los datos en pantalla"/>
+        <Button x:Name="cmdImprimir" Content="Im_primir" HorizontalAlignment="Left" Margin="373,246,0,0" VerticalAlignment="Top" Width="75" ToolTip="Imprimir los datos en pantalla" Click="cmdImprimir_Click"/>
         <Button x:Name="cmdSalir" Content="_Salir" HorizontalAlignment="Left" Margin="457,246,0,0" VerticalAlignment="Top" Width="75" Click="cmdSalir_Click" ToolTip="Salir de la ventana"/>
     </Grid>
 </Controls:MetroWindow>

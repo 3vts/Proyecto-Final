@@ -12,17 +12,16 @@
     <Grid>
         <GroupBox x:Name="grpPago" Header="Pago" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="270" Width="522">
             <Grid>
-
                 <Label x:Name="lblCodProyecto" Content="Código Proyecto" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.045,-1.316" Margin="10,19,0,0"/>
                 <Label x:Name="lblNumPago" Content="Numero de Pago" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.045,-1.316" Margin="10,59,0,0"/>
                 <Label x:Name="lblMonto" Content="Monto del Pago" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.045,-1.316"/>
                 <Label x:Name="lblFechaPago" Content="Fecha  del Pago" HorizontalAlignment="Left" Margin="10,139,0,0" RenderTransformOrigin="-0.045,-1.316" Height="26" VerticalAlignment="Top"/>
                 <Label x:Name="lblBanco" Content="Banco del Pago" HorizontalAlignment="Left" Margin="10,185,0,0" RenderTransformOrigin="-0.045,-1.316" Height="26" VerticalAlignment="Top"/>
                 <ComboBox x:Name="cboCodProyecto" Grid.Row="0" Margin="119,0,0,186" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="149" ItemsSource="{Binding}" DisplayMemberPath="Nombre_Proyecto" SelectedValuePath="Cod_Proyecto"/>
-                <TextBox x:Name="txtNumPago" HorizontalAlignment="Left" Height="23" Margin="118,59,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" MaxLength="15"/>
-                <TextBox x:Name="txtMonto" HorizontalAlignment="Left" Height="23" Margin="118,99,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" MaxLength="60"/>
+                <TextBox x:Name="txtNumPago" HorizontalAlignment="Left" Height="23" Margin="118,59,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" MaxLength="10"/>
+                <TextBox x:Name="txtMonto" HorizontalAlignment="Left" Height="23" Margin="118,99,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" MaxLength="15"/>
                 <DatePicker x:Name="dtpFechaPago" HorizontalAlignment="Left" Margin="118,139,0,0" VerticalAlignment="Top" Width="150"/>
-                <TextBox x:Name="txtBanco" HorizontalAlignment="Left" Height="23" Margin="118,185,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" MaxLength="15"/>
+                <TextBox x:Name="txtBanco" HorizontalAlignment="Left" Height="23" Margin="118,185,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" MaxLength="30"/>
                 <Label x:Name="lblObservaciones" Content="Observaciones" HorizontalAlignment="Left" Margin="298,19,0,0" RenderTransformOrigin="-0.045,-1.316" Height="26" VerticalAlignment="Top"/>
                 <TextBox x:Name="txtObservaciones" HorizontalAlignment="Left" Margin="298,50,0,20" TextWrapping="Wrap" Width="202" MaxLength="255" VerticalScrollBarVisibility="Auto"/>
             </Grid>
@@ -31,7 +30,7 @@
         <Button x:Name="cmdInsertar" Content="_Insertar" HorizontalAlignment="Left" Margin="98,290,0,0" VerticalAlignment="Top" Width="75" Click="cmdInsertar_Click" ToolTip="Insertar Registro"/>
         <Button x:Name="cmdModificar" Content="_Modificar" HorizontalAlignment="Left" Margin="193,290,0,0" VerticalAlignment="Top" Width="75" Click="cmdModificar_Click" ToolTip="Modificar Registro"/>
         <Button x:Name="cmdBorrar" Content="_Borrar" HorizontalAlignment="Left" Margin="285,290,0,0" VerticalAlignment="Top" Width="75" Click="cmdBorrar_Click" ToolTip="Borrar registro"/>
-        <Button x:Name="cmdImprimir" Content="Im_primir" HorizontalAlignment="Left" Margin="373,290,0,0" VerticalAlignment="Top" Width="75" ToolTip="Imprimir los datos en pantalla"/>
+        <Button x:Name="cmdImprimir" Content="Im_primir" HorizontalAlignment="Left" Margin="373,290,0,0" VerticalAlignment="Top" Width="75" ToolTip="Imprimir los datos en pantalla" Click="cmdImprimir_Click"/>
         <Button x:Name="cmdSalir" Content="_Salir" HorizontalAlignment="Left" Margin="457,290,0,0" VerticalAlignment="Top" Width="75" Click="cmdSalir_Click" ToolTip="Salir de la ventana"/>
     </Grid>
 </Controls:MetroWindow>

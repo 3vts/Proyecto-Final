@@ -124,5 +124,11 @@ namespace _4WPF
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void cmdImprimir_Click(object sender, RoutedEventArgs e)
+        {
+            var imprimir = new winImprimirCliente();
+            imprimir.ShowDialog();
+        }
     }
 }

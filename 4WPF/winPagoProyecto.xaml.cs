@@ -19,14 +19,22 @@ namespace _4WPF
 
         private void cmdCargarReporte_Click(object sender, RoutedEventArgs e)
         {
-            var reporte = new rptPagos();
-            var dsReporte = new dsReportes();
-            using (var adapter = new dsReportesTableAdapters.PagosTableAdapter())
+            if (cboNombreProyecto.SelectedIndex != -1)
             {
-                adapter.qryProyectos(dsReporte.Pagos, cboNombreProyecto.SelectedValue.ToString());
-                reporte.SetDataSource(dsReporte);
-                crvPagoFechas.ViewerCore.ReportSource = reporte;
+                var reporte = new rptPagos();
+                var dsReporte = new dsReportes();
+                using (var adapter = new dsReportesTableAdapters.PagosTableAdapter())
+                {
+                    adapter.qryProyectos(dsReporte.Pagos, cboNombreProyecto.SelectedValue.ToString());
+                    reporte.SetDataSource(dsReporte);
+                    crvPagoFechas.ViewerCore.ReportSource = reporte;
+                }
             }
+            else
+            {
+                MessageBox.Show("Seleccione el proyecto");
+            }
+
         }
 
         private void cmdCargarReporte_Loaded(object sender, RoutedEventArgs e)
